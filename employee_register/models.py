@@ -16,6 +16,6 @@ class Employee(models.Model):
     position= models.ForeignKey(Position,on_delete=models.CASCADE)
     @property
     def check_code(self):
-        code = int(self.emp_code)
-        return ( code <= 999 and code > 0 ) 
+        code_emp = int(self.emp_code)
+        return ( code_emp <= 999 and code_emp > 0 ) 
     
