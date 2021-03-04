@@ -4,7 +4,7 @@ from django.db import models
 
 class Position(models.Model):
     title = models.CharField(max_length=50)
-
+    id = models.IntegerField(primary_key=True)
     def __str__(self):
         return self.title
 
@@ -19,3 +19,9 @@ class Employee(models.Model):
         code_emp = int(self.emp_code)
         return ( code_emp <= 999 and code_emp > 0 ) 
     
+
+
+
+   
+
+

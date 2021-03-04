@@ -1,5 +1,4 @@
 from django.test import TestCase
-from mixer.backend.django import mixer
 from employee_register.models import Employee, Position
 class TestURL(TestCase):
 
@@ -12,6 +11,7 @@ class TestURL(TestCase):
         emplo = Employee()
         p = Position()
         p.title='DEV'
+        p.id=1
         p.save()
         emplo.fullname = 'test'
         emplo.mobile = '123455789'
